@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+/* body {
+  background-color: blueviolet;
+  margin: 0%;
+  padding: 0%;
+  font-family: "Poppins", sans-serif;
+} */
+html {
+  background-color: #E4E9FD;
+  /* background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%); */
+  background-image: -webkit-linear-gradient(65deg, #9fa8a3 50%, #e3e0cf 50%);
+  min-height: 1000px;
+  font-family: 'helvetica neue';
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: #9fa8a3;
+  font-size: 60px;
+  margin: 0 20px;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.todolist {
+  width: 500px;
+  min-height: 300px;
+  border: 2px solid white;
+  border-radius: 0px 0px 100px 100px;
+  padding: 20px 20px 100px 20px;
+  margin-top: 30px;
+  /* background-image: radial-gradient(rgb(176, 115, 233), blueviolet); */
+  background-image: radial-gradient(#9fa8a3, #c5d5cb);
+}
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+.todolist p {
+  color: #e3e0cf;
+  font-size: 24px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  /* border-bottom: 1px solid white; */
+  word-break: break-word;
+}
+/* p button {
+  float: right;
+  color: blueviolet;
+  margin-left: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 0px solid transparent;
+  border: 1px solid white;
+  transition: 0.2s all ease-in-out;
+} */
+
+p button:hover {
+  background-color: blueviolet;
+  color: white;
+}
+#inputtask {
+  min-width: 300px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 0px solid transparent;
+  font-size: 24px;
+  margin-right: 10px;
+  color: #9fa8a3;
+}
+
+#inputtask:focus {
+  outline: none;
+}
+
+#addbutton,
+.clear {
+  color: #9fa8a3;
+  font-weight: 500;
+  font-size: 24px;
+  border-radius: 5px;
+  border: 0px solid transparent;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 1px solid rgb(255, 255, 255);
+  transition: 0.3s all ease-in-out;
+}
+#addbutton:hover,
+.clear:hover {
+  background-color: rgba(194, 129, 255, 0.253);
+  color: white;
+  transform: scale(0.97);
+}
+/* .d-none {
+  display: none;
+} */
+
+/* p span:focus {
+  background-color: white;
+  color: black;
+  outline: none;
+  padding: 0 5px;
+  display: inline-block;
+  min-width: 300px;
+  max-width: 400px;
+} */
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a; 
+}
+
+.link {
+  text-align: center;
+  margin: 20px;
+}
+.link a {
+  color: white;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
