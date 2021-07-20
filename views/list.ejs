@@ -1,24 +1,27 @@
-<%- include("header") -%>
+<%- include("partials/header") -%>
     <div class="main">
         <h1><%= listTitle %></h1>
       
         <form class="form" action="/" method="POST">
           <input id="inputtask" type="text" name="newItem" placeholder="Enter New task" autocomplete="off">
-          <button id="addbutton"  type="submit" name="AddItem" value=<%= listTitle %> > Add Task </button>
+          <button id="addbutton"  type="submit" name="listItem" value=<%= listTitle %> > Add Task </button>
         </form>
         <ul class="todolist">
-            <% for(let i=0; i< newListItems.length ; i++ ) { %>
-                <div class="item">
-                <input type="checkbox">
-                <p>
-                    <%= newListItems[i] %>
-                </p>
-            </div>
-            <% } %>
+            <% newListItems.forEach( (newListItem) => { %>
+                <form action="/delete" method="POST">
+                    <div class="item">
+                    <input type="checkbox" onChange="this.form.submit()" name="checkbox" value="<%= newListItem._id %>" >    
+                    <p>
+                    <%= newListItem.name %>
+                    </p>
+                    </div>
+                    <input type="hidden" name="listname" value="<%= listTitle %>"> </input>
+                </form>
+            <% }) %>
         </ul>
         <form action="/clear" method="POST">
         <button class="clear d-none" name="clear" value=<%= listTitle%>>Clear All</button>
         </form>
       </div>
-<%- include("footer") -%>
+<%- include("partials/footer") -%>
 
